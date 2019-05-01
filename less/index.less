@@ -55,5 +55,157 @@ table {
 
 html, body {
     height: 100%;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
 
+//variables
+@link-color: black;
+@visited-link: rgb(160, 160, 160);
+@header-color: rgb(227, 227, 231);
+
+@font-small: 1.75rem;
+@font-medium: 2.2rem;
+@font-large: 2.5rem;
+@font-huge: 3.5rem;
+
+//mixins
+.flexed {
+    display:flex;
+    justify-content: space-between;
+}
+
+.profile-info{
+    text-align:center;
+    padding:3% 0;
+}
+
+//start of nested container - all elements are nested in one container!
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 1%;
+
+    nav {
+        font-size: @font-small;
+        .flexed;
+        margin-left:65%;
+
+        a{
+            text-decoration: none;
+            color: @link-color;
+            display: inline-block;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &:visited{
+                color:@visited-link;
+            }
+        }
+    }
+
+
+    header {
+        .flexed;
+        background-color: @header-color;
+        height: 40vh;
+        margin: 2% 0;
+
+        div {
+            width:49%;
+        }
+
+        .image-header{
+            padding-top:5vh;
+        }
+
+        img {
+            width:90%;
+            margin: 0 5%;
+            border-radius:25px;             
+        }
+
+            
+            
+        h1{
+            font-size: @font-huge;
+            .profile-info;
+        }
+
+        h2 {
+            font-size:@font-large;
+            .profile-info;
+        }
+
+        p {
+            font-size:@font-small;
+        }
+        
+        .contact-options{
+            width:100%;
+            padding-top: 0;
+            font-size:@font-small;
+
+            h3{
+                font-size:@font-medium;
+                padding: 3% 0;
+            }
+
+            a{
+                text-decoration:none;
+                color:@link-color;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+
+                &:visited{
+                    color:@visited-link;
+                }
+            }
+        }
+
+    }
+
+    .intro-and-skills{
+        .flexed;
+        font-size: @font-small;
+        padding-bottom: 2%;
+        text-align: center;
+
+        div{
+            width:60%
+        }
+
+        .skills {
+            width: 39%;
+        }
+        h2{
+            font-size:@font-medium;
+            padding: 3% 0;
+        }
+
+        ul{
+            .flexed;
+            flex-direction: column;
+            height: 90%;
+            text-align: center;
+            list-style-type: square;
+        }
+
+        li{
+            display:inline-block;
+            height: 20%;
+            border-bottom: 0.1rem solid gray;
+            border-left: 0.1rem solid gray;
+            border-right: 0.1rem solid gray;
+            padding-top:1.5%;
+
+            &:first-child{
+                border-top: 0.1rem solid gray;
+            }
+        }
+    }
+}
