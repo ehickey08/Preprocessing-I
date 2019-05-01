@@ -55,5 +55,239 @@ table {
 
 html, body {
     height: 100%;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+//variables
+@link-color: black;
+@visited-link: rgb(160, 160, 160);
+@header-color: rgba(227, 227, 231, 0.5);
+@gray-row: rgba(211, 211, 211, 0.5);
+@font-smallest:1.25rem;
+@font-small: 1.75rem;
+@font-medium: 2.2rem;
+@font-large: 2.5rem;
+@font-huge: 3.5rem;
+
+//mixins
+.flexed {
+    display:flex;
+    justify-content: space-between;
+}
+
+.profile-info{
+    text-align:center;
+    padding:3% 0;
+}
+
+//start of nested container - all elements are nested in one container!
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 1%;
+
+    @media (max-width:500px){
+        width:450px;
+        margin: 0 auto;
+        padding:3%;
+    }
+
+    nav {
+        font-size: @font-small;
+        .flexed;
+        margin-left:65%;
+        
+        a{
+            text-decoration: none;
+            color: @link-color;
+            display: inline-block;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &:visited{
+                color:@visited-link;
+            }
+        }
+
+        @media (max-width:500px){
+            margin-left:0;
+        }
+    }
+
+
+    header {
+        .flexed;
+        background-color: @header-color;
+        margin: 2% 0;
+        padding: 1%;
+
+        div {
+            width:49%;
+            @media (max-width:500px){
+                width:100%;
+            }
+        }
+
+        .image-header{
+            padding-top:5%;
+            @media (max-width:500px){
+                display: none;
+            }
+        }
+
+        img {
+            width:90%;
+            margin: 0 5%;
+            border-radius:25px;             
+        }
+
+            
+            
+        h1{
+            font-size: @font-huge;
+            .profile-info;
+        }
+
+        h2 {
+            font-size:@font-large;
+            .profile-info;
+        }
+
+        p {
+            font-size:@font-small;
+        }
+        
+        .contact-options{
+            width:100%;
+            padding-top: 0;
+            font-size:@font-small;
+            @media (max-width:500px){
+                text-align: center;
+            }
+            h3{
+                font-size:@font-medium;
+                padding: 3% 0;
+            }
+
+            a{
+                text-decoration:none;
+                color:@link-color;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+
+                &:visited{
+                    color:@visited-link;
+                }
+            }
+        }
+
+        .grow:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    .intro-and-skills{
+        .flexed;
+        font-size: @font-small;
+        padding-bottom: 2%;
+        text-align: center;
+        @media (max-width:500px){
+            display: block;    
+        }
+        div{
+            width:60%;
+            @media (max-width: 500px){
+                width: 100%;
+            }
+        }
+
+        .skills {
+            width: 39%;
+            @media (max-width:500px){
+                width:100%;   
+            }
+        }
+        h2{
+            font-size:@font-medium;
+            padding: 3% 0;
+        }
+
+        ul{
+            .flexed;
+            flex-direction: column;
+            text-align: center;
+            list-style-type: square;
+            padding-top:3%;
+            .gray-row{
+                background-color:@gray-row;
+            }
+        }
+
+        li{
+            display:inline-block;
+            height: 20%;
+            border-bottom: 0.1rem solid gray;
+            border-left: 0.1rem solid gray;
+            border-right: 0.1rem solid gray;
+            padding-top:1.5%;
+
+            &:first-child{
+                border-top: 0.1rem solid gray;
+            }
+
+            
+        }
+    }
+
+    .work-history{
+        font-size:@font-small;
+        margin-top:4%;
+
+        h2{
+            font-size:@font-medium;
+            margin-left:5%;
+            margin-bottom: 2%;
+            @media (max-width:500px){
+                text-align:center;
+                margin-left: 0%;
+            }
+        }
+
+        table{
+            text-align:center;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            width:100%;
+            margin:0.5%;
+            th{
+                font-weight:bold;
+                padding-top: 1%;
+                padding-bottom:1%;
+            }
+
+            tr{}
+            td{
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+            .gray-row{
+                background-color: @gray-row;
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+        font-size:@font-smallest;
+        margin-top:2%;
+    }
+}
