@@ -292,6 +292,7 @@ h5 {
   flex-direction: column;
   text-align: center;
   list-style-type: square;
+  padding-top: 3%;
 }
 .container .intro-and-skills ul .gray-row {
   background-color: rgba(211, 211, 211, 0.5);
