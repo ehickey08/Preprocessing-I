@@ -136,6 +136,14 @@ body {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
 .flexed {
   display: flex;
   justify-content: space-between;
@@ -148,6 +156,13 @@ body {
   width: 960px;
   margin: 0 auto;
   padding: 1%;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 3%;
+  }
 }
 .container nav {
   font-size: 1.75rem;
@@ -166,18 +181,33 @@ body {
 .container nav a:visited {
   color: #a0a0a0;
 }
+@media (max-width: 500px) {
+  .container nav {
+    margin-left: 0;
+  }
+}
 .container header {
   display: flex;
   justify-content: space-between;
-  background-color: #e3e3e7;
+  background-color: rgba(227, 227, 231, 0.5);
   margin: 2% 0;
   padding: 1%;
 }
 .container header div {
   width: 49%;
 }
+@media (max-width: 500px) {
+  .container header div {
+    width: 100%;
+  }
+}
 .container header .image-header {
   padding-top: 5%;
+}
+@media (max-width: 500px) {
+  .container header .image-header {
+    display: none;
+  }
 }
 .container header img {
   width: 90%;
@@ -241,6 +271,9 @@ body {
   text-align: center;
   list-style-type: square;
 }
+.container .intro-and-skills ul .gray-row {
+  background-color: rgba(211, 211, 211, 0.5);
+}
 .container .intro-and-skills li {
   display: inline-block;
   height: 20%;
@@ -277,7 +310,7 @@ body {
   padding-bottom: 1%;
 }
 .container .work-history table .gray-row {
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.5);
 }
 .container footer {
   text-align: center;

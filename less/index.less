@@ -59,11 +59,15 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
 //variables
 @link-color: black;
 @visited-link: rgb(160, 160, 160);
-@header-color: rgb(227, 227, 231);
-
+@header-color: rgba(227, 227, 231, 0.5);
+@gray-row: rgba(211, 211, 211, 0.5);
 @font-smallest:1.25rem;
 @font-small: 1.75rem;
 @font-medium: 2.2rem;
@@ -87,11 +91,17 @@ html, body {
     margin: 0 auto;
     padding: 1%;
 
+    @media (max-width:500px){
+        width:500px;
+        margin: 0 auto;
+        padding:3%;
+    }
+
     nav {
         font-size: @font-small;
         .flexed;
         margin-left:65%;
-
+        
         a{
             text-decoration: none;
             color: @link-color;
@@ -105,6 +115,10 @@ html, body {
                 color:@visited-link;
             }
         }
+
+        @media (max-width:500px){
+            margin-left:0;
+        }
     }
 
 
@@ -116,10 +130,16 @@ html, body {
 
         div {
             width:49%;
+            @media (max-width:500px){
+                width:100%;
+            }
         }
 
         .image-header{
             padding-top:5%;
+            @media (max-width:500px){
+                display: none;
+            }
         }
 
         img {
@@ -194,6 +214,10 @@ html, body {
             height: 90%;
             text-align: center;
             list-style-type: square;
+        
+            .gray-row{
+                background-color:@gray-row;
+            }
         }
 
         li{
@@ -207,6 +231,8 @@ html, body {
             &:first-child{
                 border-top: 0.1rem solid gray;
             }
+
+            
         }
     }
 
@@ -236,7 +262,7 @@ html, body {
                 padding-bottom: 1%;
             }
             .gray-row{
-                background-color:lightgray;
+                background-color: @gray-row;
             }
         }
     }
