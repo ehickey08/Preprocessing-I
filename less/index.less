@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5 {
     padding: 1%;
 
     @media (max-width:500px){
-        width:500px;
+        width:450px;
         margin: 0 auto;
         padding:3%;
     }
@@ -168,7 +168,9 @@ h1, h2, h3, h4, h5 {
             width:100%;
             padding-top: 0;
             font-size:@font-small;
-
+            @media (max-width:500px){
+                text-align: center;
+            }
             h3{
                 font-size:@font-medium;
                 padding: 3% 0;
@@ -188,6 +190,9 @@ h1, h2, h3, h4, h5 {
             }
         }
 
+        .grow:hover{
+            transform: scale(1.2);
+        }
     }
 
     .intro-and-skills{
@@ -195,13 +200,21 @@ h1, h2, h3, h4, h5 {
         font-size: @font-small;
         padding-bottom: 2%;
         text-align: center;
-
+        @media (max-width:500px){
+            display: block;    
+        }
         div{
-            width:60%
+            width:60%;
+            @media (max-width: 500px){
+                width: 100%;
+            }
         }
 
         .skills {
             width: 39%;
+            @media (max-width:500px){
+                width:100%;   
+            }
         }
         h2{
             font-size:@font-medium;
@@ -211,7 +224,6 @@ h1, h2, h3, h4, h5 {
         ul{
             .flexed;
             flex-direction: column;
-            height: 90%;
             text-align: center;
             list-style-type: square;
         
@@ -243,6 +255,11 @@ h1, h2, h3, h4, h5 {
         h2{
             font-size:@font-medium;
             margin-left:5%;
+            margin-bottom: 2%;
+            @media (max-width:500px){
+                text-align:center;
+                margin-left: 0%;
+            }
         }
 
         table{
@@ -257,6 +274,7 @@ h1, h2, h3, h4, h5 {
                 padding-bottom:1%;
             }
 
+            tr{}
             td{
                 padding-top: 1%;
                 padding-bottom: 1%;

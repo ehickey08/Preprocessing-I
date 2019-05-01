@@ -159,7 +159,7 @@ h5 {
 }
 @media (max-width: 500px) {
   .container {
-    width: 500px;
+    width: 450px;
     margin: 0 auto;
     padding: 3%;
   }
@@ -232,6 +232,11 @@ h5 {
   padding-top: 0;
   font-size: 1.75rem;
 }
+@media (max-width: 500px) {
+  .container header .contact-options {
+    text-align: center;
+  }
+}
 .container header .contact-options h3 {
   font-size: 2.2rem;
   padding: 3% 0;
@@ -246,6 +251,9 @@ h5 {
 .container header .contact-options a:visited {
   color: #a0a0a0;
 }
+.container header .grow:hover {
+  transform: scale(1.2);
+}
 .container .intro-and-skills {
   display: flex;
   justify-content: space-between;
@@ -253,11 +261,26 @@ h5 {
   padding-bottom: 2%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .container .intro-and-skills {
+    display: block;
+  }
+}
 .container .intro-and-skills div {
   width: 60%;
 }
+@media (max-width: 500px) {
+  .container .intro-and-skills div {
+    width: 100%;
+  }
+}
 .container .intro-and-skills .skills {
   width: 39%;
+}
+@media (max-width: 500px) {
+  .container .intro-and-skills .skills {
+    width: 100%;
+  }
 }
 .container .intro-and-skills h2 {
   font-size: 2.2rem;
@@ -267,7 +290,6 @@ h5 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 90%;
   text-align: center;
   list-style-type: square;
 }
@@ -292,6 +314,13 @@ h5 {
 .container .work-history h2 {
   font-size: 2.2rem;
   margin-left: 5%;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .container .work-history h2 {
+    text-align: center;
+    margin-left: 0%;
+  }
 }
 .container .work-history table {
   text-align: center;
