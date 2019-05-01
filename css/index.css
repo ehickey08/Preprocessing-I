@@ -170,14 +170,14 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #e3e3e7;
-  height: 40vh;
   margin: 2% 0;
+  padding: 1%;
 }
 .container header div {
   width: 49%;
 }
 .container header .image-header {
-  padding-top: 5vh;
+  padding-top: 5%;
 }
 .container header img {
   width: 90%;
@@ -251,4 +251,36 @@ body {
 }
 .container .intro-and-skills li:first-child {
   border-top: 0.1rem solid gray;
+}
+.container .work-history {
+  font-size: 1.75rem;
+  margin-top: 4%;
+}
+.container .work-history h2 {
+  font-size: 2.2rem;
+  margin-left: 5%;
+}
+.container .work-history table {
+  text-align: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  margin: 0.5%;
+}
+.container .work-history table th {
+  font-weight: bold;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.container .work-history table td {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.container .work-history table .gray-row {
+  background-color: lightgray;
+}
+.container footer {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 2%;
 }

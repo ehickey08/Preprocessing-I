@@ -64,6 +64,7 @@ html, body {
 @visited-link: rgb(160, 160, 160);
 @header-color: rgb(227, 227, 231);
 
+@font-smallest:1.25rem;
 @font-small: 1.75rem;
 @font-medium: 2.2rem;
 @font-large: 2.5rem;
@@ -110,15 +111,15 @@ html, body {
     header {
         .flexed;
         background-color: @header-color;
-        height: 40vh;
         margin: 2% 0;
+        padding: 1%;
 
         div {
             width:49%;
         }
 
         .image-header{
-            padding-top:5vh;
+            padding-top:5%;
         }
 
         img {
@@ -207,5 +208,42 @@ html, body {
                 border-top: 0.1rem solid gray;
             }
         }
+    }
+
+    .work-history{
+        font-size:@font-small;
+        margin-top:4%;
+
+        h2{
+            font-size:@font-medium;
+            margin-left:5%;
+        }
+
+        table{
+            text-align:center;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            width:100%;
+            margin:0.5%;
+            th{
+                font-weight:bold;
+                padding-top: 1%;
+                padding-bottom:1%;
+            }
+
+            td{
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+            .gray-row{
+                background-color:lightgray;
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+        font-size:@font-smallest;
+        margin-top:2%;
     }
 }
